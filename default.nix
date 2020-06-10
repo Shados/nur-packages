@@ -10,7 +10,7 @@ rec {
   ## Packages
 
   firefox-common = opts: with pkgs; callPackage
-    (import nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix opts)
+    (import (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix) opts)
     { inherit (gnome2) libIDL;
       libpng = libpng_apng;
       gnused = gnused_422;
