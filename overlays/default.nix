@@ -1,4 +1,9 @@
 {
+  # Allows specifying cross-lua-version Lua package overrides
+  lua-overrides = import ./lua-overrides.nix;
+  # Requires the above overlay, specifies a bunch of Lua packages :)
+  lua-packages = import ./lua-packages/overlay.nix;
+
   # Fixes/workarounds for issues in upstream nixpkgs that I CBF upstreaming (or
   # that would be problematic to upstream)
   fixes = self: super: {
@@ -10,6 +15,7 @@
       rpath = oldAttrs.rpath + ":" + libs;
     });
   };
+
   # Pinned old flashplayer versions
   oldflash = self: super: let
     # Helpers {{{
@@ -75,6 +81,7 @@
         nix-prefetch-url "$url"
       '';
   };
+
   # Equivalents to nixos-help for nix and nixpkgs manuals
   dochelpers = self: super: let
     writeHtmlHelper = name: htmlPath: super.writeScriptBin name /*ft=sh*/''
