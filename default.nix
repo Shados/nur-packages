@@ -25,6 +25,8 @@ rec {
       privacySupport = true;
     };
 
+  fixjson = pkgs.callPackage ./pkgs/fixjson { };
+
   rxvt_unicode_24bit = pkgs.callPackage ./pkgs/rxvt_unicode_24bit {
     perlSupport = true;
     gdkPixbufSupport = true;
