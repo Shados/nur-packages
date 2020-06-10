@@ -13,7 +13,7 @@ let
       sha256 = "1p6agl0dvvf3qrnwjc9j3nh662i9432bwr6q5rry48a9z9l7zk26";
     };
     patches = [
-      "${nixpkgsPath}/pkgs/applications/networking/browsers/firefox/no-buildconfig-ffx65.patch"
+      (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/no-buildconfig-ffx65.patch)
     ];
     extraConfigureFlags = [
       "--enable-content-sandbox"
@@ -21,6 +21,9 @@ let
       "--with-app-basename=Waterfox"
       "--with-branding=browser/branding/waterfox"
       "--with-distribution-id=net.waterfox"
+    ];
+    extraMakeFlags = [
+      "-s"
     ];
     meta = with stdenv.lib; {
       description = "A web browser designed for privacy and user choice";
@@ -40,9 +43,6 @@ let
       license     = licenses.mpl20;
     };
   }).overrideAttrs(oa: {
-    patches = [
-      "${nixpkgsPath}/pkgs/applications/networking/browsers/firefox/no-buildconfig-ffx65.patch"
-    ];
     hardeningDisable = [ "format" ]; # -Werror=format-security
   });
 in waterfox-unwrapped-base.overrideAttrs(oa: let
