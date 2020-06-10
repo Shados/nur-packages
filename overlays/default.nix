@@ -17,7 +17,7 @@
         src = flashSrcs."${ver}";
         preferLocalBuild = true;
       } ''
-        ${pkgs.unzip}/bin/unzip $src
+        ${super.unzip}/bin/unzip $src
         for f in */*_linux.x86_64.tar.gz; do
           cp $f $out
         done
@@ -26,7 +26,7 @@
         src = flashSrcs."${ver}";
         preferLocalBuild = true;
       } ''
-        ${pkgs.unzip}/bin/unzip $src
+        ${super.unzip}/bin/unzip $src
         for f in */*_linux_sa.x86_64.tar.gz; do
           cp $f $out
         done
@@ -117,8 +117,5 @@
       # - XMLFORMT_CONFIg (maybe?)
       manual = super.callPackage "${super.path}/doc" { };
     in writeHtmlHelper "nixpkgs-help" "${manual}/share/doc/nixpkgs/manual.html";
-    nixos-options-help = let
-      manual = config.system.build.manual.manualHTML;
-    in writeHtmlHelper "nixos-options-help" "${manual}/share/doc/nixos/options.html";
   };
 }

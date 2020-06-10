@@ -5,7 +5,7 @@ in
 rec {
   lib = import ./lib { inherit pkgs; };
   modules = import ./modules;
-  overlays = import ./modules;
+  overlays = import ./overlays;
 
   ## Packages
 
