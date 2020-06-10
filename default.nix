@@ -9,6 +9,8 @@ rec {
 
   ## Packages
 
+  bash-language-server = pkgs.callPackage ./pkgs/lsp/bash-language-server { };
+
   firefox-common = opts: with pkgs; callPackage
     (import (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix) opts)
     { inherit (gnome2) libIDL;
