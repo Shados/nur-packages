@@ -46,6 +46,8 @@ rec {
     inherit (pkgs.xorg) libXft;
   };
 
+  vscode-css-language-server-bin = pkgs.callPackage ./pkgs/lsp/vscode-css-languageserver-bin { };
+
   waterfox = pkgs.wrapFirefox waterfox-unwrapped {
     browserName = "waterfox";
     nameSuffix = "";
