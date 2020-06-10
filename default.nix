@@ -35,7 +35,7 @@ rec {
     inherit (pkgs.xorg) libXft;
   };
 
-  waterfox = pkgs.wrapFirefox waterfox {
+  waterfox = pkgs.wrapFirefox waterfox-unwrapped {
     browserName = "waterfox";
     nameSuffix = "";
   };
