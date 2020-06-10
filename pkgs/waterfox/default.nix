@@ -41,6 +41,7 @@ let
       maintainers = with maintainers; [ arobyn ];
       platforms   =  [ "x86_64-linux" ];
       license     = licenses.mpl20;
+      longBuild = true; # Takes more than Travis' 50min build timeout to complete
     };
   }).overrideAttrs(oa: {
     hardeningDisable = [ "format" ]; # -Werror=format-security
