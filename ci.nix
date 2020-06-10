@@ -30,6 +30,7 @@ let
     (filter (n: !isReserved n)
     (attrNames nurAttrs))));
 in rec {
+  # TODO build the lua packages?
   buildPkgs = filter isBuildable nurPkgs;
   cachePkgs = filter isCacheable buildPkgs;
 

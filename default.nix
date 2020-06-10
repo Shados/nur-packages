@@ -25,7 +25,14 @@ rec {
       privacySupport = true;
     };
 
+  rxvt_unicode_24bit = pkgs.callPackage ./pkgs/rxvt_unicode_24bit {
+    perlSupport = true;
+    gdkPixbufSupport = true;
+    unicode3Support = true;
+  };
+
   tagsistant = pkgs.callPackage ./pkgs/tagsistant { };
+
   urxvt-config-reload = pkgs.callPackage ./pkgs/urxvt-config-reload {
     inherit (pkgs.perlPackages) AnyEvent LinuxFD CommonSense SubExporter
       DataOptList ParamsUtil SubInstall;
