@@ -78,12 +78,6 @@ let
         # { name = "INOTIFY"; dep = glibc; }
     });
 
-    lyaml = super.lyaml.override ({
-      buildInputs = with selfPkgs; [
-        libyaml
-      ];
-    });
-
     moonscript = super.moonscript.override ({
       src = pkgs.fetchFromGitHub {
         owner = "Shados"; repo = "moonscript";
