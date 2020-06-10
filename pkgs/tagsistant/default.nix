@@ -25,7 +25,7 @@ stdenv.mkDerivation {
       --replace 'dbi_initialize(NULL' 'dbi_initialize("${libdbiDrivers}/lib/dbd/"' \
       --replace 'dbi_initialize_r(NULL' 'dbi_initialize_r("${libdbiDrivers}/lib/dbd/"'
   '';
-  meta = {
+  meta = with stdenv.lib; {
     description = "Semantic filesystem for Linux, with relation reasoner, autotagging plugins and a deduplication service";
     longDescription = ''
       Tagsistant is a semantic file system for Linux, a personal tool
