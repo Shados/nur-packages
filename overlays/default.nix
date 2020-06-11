@@ -4,6 +4,10 @@
   # Requires the above overlay, specifies a bunch of Lua packages :)
   lua-packages = import ./lua-packages/overlay.nix;
 
+  # Workaround for https://github.com/NixOS/nixpkgs/issues/44426 python
+  # overrides not being composable...
+  python-overrides = import ./python-overrides.nix;
+
   # Fixes/workarounds for issues in upstream nixpkgs that I CBF upstreaming (or
   # that would be problematic to upstream)
   fixes = self: super: {
