@@ -29,6 +29,8 @@ let repo = rec {
 
   fixjson = pkgs.callPackage ./pkgs/fixjson { };
 
+  json-yaml = pkgs.callPackage ./pkgs/json-yaml { };
+
   rxvt_unicode_24bit = pkgs.callPackage ./pkgs/rxvt_unicode_24bit {
     perlSupport = true;
     gdkPixbufSupport = true;
