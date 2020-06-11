@@ -10,7 +10,7 @@
 
   # Fixes/workarounds for issues in upstream nixpkgs that I CBF upstreaming (or
   # that would be problematic to upstream)
-  fixes = self: super: {
+  fixes = self: super: with super.lib; {
     # Fix flashplayer-standalone hw gpu stuff
     flashplayer-standalone = super.flashplayer-standalone.overrideAttrs(oldAttrs: let
       libs = super.stdenv.lib.makeLibraryPath [ super.libGL ];
