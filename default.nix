@@ -2,8 +2,8 @@
 let
   nixpkgsPath = pkgs.path;
 in
-rec {
-  lib = import ./lib { inherit pkgs; };
+let repo = rec {
+  lib = import ./lib { inherit pkgs repo; };
   modules = import ./modules;
   overlays = import ./overlays;
 
@@ -55,4 +55,4 @@ rec {
   waterfox-unwrapped = pkgs.callPackage ./pkgs/waterfox {
     inherit firefox-common nixpkgsPath;
   };
-}
+}; in repo

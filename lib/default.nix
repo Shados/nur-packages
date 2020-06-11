@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, repo }:
 with pkgs.lib;
 {
 }
