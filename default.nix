@@ -15,12 +15,10 @@ let repo = rec {
     (import (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix) opts)
     { libpng = libpng_apng;
       gnused = gnused_422;
-      icu = icu63;
       inherit (darwin.apple_sdk.frameworks) CoreMedia ExceptionHandling
                                             Kerberos AVFoundation MediaToolbox
                                             CoreLocation Foundation AddressBook;
       inherit (darwin) libobjc;
-      inherit (rustPackages) cargo rustc;
 
       enableOfficialBranding = false;
       privacySupport = true;
