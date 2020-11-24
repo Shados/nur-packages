@@ -49,11 +49,11 @@ let repo = rec {
 
   vscode-css-language-server-bin = pkgs.callPackage ./pkgs/lsp/vscode-css-languageserver-bin { };
 
-  waterfox = pkgs.wrapFirefox waterfox-unwrapped {
-    browserName = "waterfox";
-    nameSuffix = "";
-  };
-  waterfox-unwrapped = pkgs.callPackage ./pkgs/waterfox {
-    inherit firefox-common nixpkgsPath;
-  };
+  # waterfox = pkgs.wrapFirefox waterfox-unwrapped {
+  #   browserName = "waterfox";
+  #   nameSuffix = "";
+  # };
+  # waterfox-unwrapped = pkgs.callPackage ./pkgs/waterfox {
+  #   inherit firefox-common nixpkgsPath;
+  # };
 }; in repo
