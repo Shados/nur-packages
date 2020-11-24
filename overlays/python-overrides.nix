@@ -3,7 +3,7 @@ let
   pyNames = [
     "python" "python2" "python3"
     "python27" "python36" "python37" "python38" "python39" "python310"
-    "pypy"
+    "pypy" "pypy2" "pypy27" "pypy3" "pypy36"
   ];
   overriddenPython = name: [
     { inherit name; value = super.${name}.override { packageOverrides = self.pythonOverrides; }; }
