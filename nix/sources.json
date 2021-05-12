@@ -1,6 +1,7 @@
 {
     "clementine": {
         "branch": "master",
+        "builtin": false,
         "description": ":tangerine: Clementine Music Player",
         "homepage": "https://www.clementine-player.org/",
         "owner": "clementine-player",
@@ -13,6 +14,7 @@
     },
     "cparser": {
         "branch": "master",
+        "builtin": false,
         "description": "A compact C preprocessor and declaration parser written in pure Lua",
         "homepage": null,
         "owner": "facebookresearch",
@@ -25,6 +27,7 @@
     },
     "earthshine": {
         "branch": "master",
+        "builtin": false,
         "description": "Very 'early alpha' set of Moonscript libraries",
         "homepage": null,
         "owner": "Shados",
@@ -37,6 +40,7 @@
     },
     "facade.nvim": {
         "branch": "master",
+        "builtin": false,
         "description": "An extremely early/bare Moonscript wrapper around Neovim's Lua API",
         "homepage": null,
         "owner": "Shados",
@@ -49,6 +53,7 @@
     },
     "json-yaml": {
         "branch": "master",
+        "builtin": false,
         "description": "Convert JSON to YAML and back",
         "homepage": "",
         "owner": "sjmulder",
@@ -61,6 +66,7 @@
     },
     "lcmark": {
         "branch": "master",
+        "builtin": false,
         "description": "Flexible CommonMark converter",
         "homepage": null,
         "owner": "Shados",
@@ -73,6 +79,7 @@
     },
     "ldoc": {
         "branch": "shados-collected-improvements",
+        "builtin": false,
         "description": "A fork collecting some fixes/changes/improvements I use; seeing as it appears the upstream maintainer is absent.",
         "homepage": "http://stevedonovan.github.com/ldoc/",
         "owner": "Shados",
@@ -85,6 +92,7 @@
     },
     "loudgain": {
         "branch": "master",
+        "builtin": false,
         "description": "ReplayGain 2.0 loudness normalizer based on the EBU R128/ITU BS.1770 standard (-18 LUFS, FLAC, Ogg, MP2, MP3, MP4, M4A, AAC, ALAC, Opus, ASF, WMA, WAV, AIFF, WavPack, APE)",
         "homepage": "",
         "owner": "Moonbase59",
@@ -97,6 +105,7 @@
     },
     "moonpick-vim": {
         "branch": "master",
+        "builtin": false,
         "description": "ALE-based vim integration for moonpick",
         "homepage": null,
         "owner": "Shados",
@@ -109,6 +118,7 @@
     },
     "moonscript": {
         "branch": "master",
+        "builtin": false,
         "description": ":crescent_moon: A language that compiles to Lua",
         "homepage": "http://moonscript.org",
         "owner": "Shados",
@@ -121,6 +131,7 @@
     },
     "mosh": {
         "branch": "master",
+        "builtin": false,
         "description": "Mobile Shell",
         "homepage": "https://mosh.org",
         "owner": "mobile-shell",
@@ -133,6 +144,7 @@
     },
     "tagsistant": {
         "branch": "master",
+        "builtin": false,
         "description": "Semantic filesystem for Linux, with relation reasoner, autotagging plugins and a deduplication service",
         "homepage": "http://www.tagsistant.net",
         "owner": "StrumentiResistenti",
@@ -145,6 +157,7 @@
     },
     "urxvt-config-reload": {
         "branch": "master",
+        "builtin": false,
         "description": null,
         "homepage": null,
         "owner": "regnarg",
@@ -157,6 +170,7 @@
     },
     "urxvtconfig": {
         "branch": "master",
+        "builtin": false,
         "description": "A graphical user interface tool for configuration of the rxvt-unicode terminal emulator.",
         "homepage": null,
         "owner": "daedreth",
