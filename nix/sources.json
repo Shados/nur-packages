@@ -35,6 +35,18 @@
         "url": "https://github.com/Shados/earthshine/archive/6d541b9225efe880ea231e24261af1ff722c3cac.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "facade.nvim": {
+        "branch": "master",
+        "description": "An extremely early/bare Moonscript wrapper around Neovim's Lua API",
+        "homepage": null,
+        "owner": "Shados",
+        "repo": "facade.nvim",
+        "rev": "5b68a13810d6375b7a21d10f9e0b5dcc1e5526f6",
+        "sha256": "0lxv8cn90ql4kj5fq3d6lfplw5rpfhxkmxnlidnbr61l18vkq4q1",
+        "type": "tarball",
+        "url": "https://github.com/Shados/facade.nvim/archive/5b68a13810d6375b7a21d10f9e0b5dcc1e5526f6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "moonpick-vim": {
         "branch": "master",
         "description": "ALE-based vim integration for moonpick",
