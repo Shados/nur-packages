@@ -39,11 +39,7 @@ in
         name = "${pname}-${version}";
         pname = "clementine";
         version = "1.4.0rc1-591-g579d86904";
-        src = super.fetchFromGitHub {
-          owner = "clementine-player"; repo = "Clementine";
-          rev = version;
-          sha256 = "sha256-1BdNLMbAgT5qqDUzMsb05iu3r8Z2O61xUUk0lnOIGvI=";
-        };
+        src = pins.clementine;
         nativeBuildInputs = oa.nativeBuildInputs or [] ++ [
           util-linux
           libunwind

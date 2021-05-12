@@ -1,4 +1,16 @@
 {
+    "clementine": {
+        "branch": "master",
+        "description": ":tangerine: Clementine Music Player",
+        "homepage": "https://www.clementine-player.org/",
+        "owner": "clementine-player",
+        "repo": "Clementine",
+        "rev": "1.4.0rc1-591-g579d86904",
+        "sha256": "1whsi1rrcd29a5qssfvnqspvfaz6yk334crmm1m3x0f0qqn4s5yl",
+        "type": "tarball",
+        "url": "https://github.com/clementine-player/Clementine/archive/1.4.0rc1-591-g579d86904.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "mosh": {
         "branch": "master",
         "description": "Mobile Shell",
