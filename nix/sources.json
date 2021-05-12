@@ -142,5 +142,17 @@
         "type": "tarball",
         "url": "https://github.com/StrumentiResistenti/Tagsistant/archive/0dabdca1077136b7626a2977410f910689c235b7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "urxvt-config-reload": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "regnarg",
+        "repo": "urxvt-config-reload",
+        "rev": "0448564caedc636bc90bac4c126e3bf75497a621",
+        "sha256": "1xacjh0nvr7kiiqsnliaxw137psll4hr9n4j1562nhbgrzghwxbj",
+        "type": "tarball",
+        "url": "https://github.com/regnarg/urxvt-config-reload/archive/0448564caedc636bc90bac4c126e3bf75497a621.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
