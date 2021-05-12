@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, qmake
+{ stdenv, qmake
 , qtbase, imagemagick, fontconfig, libXft
 }:
 
@@ -6,11 +6,7 @@ stdenv.mkDerivation rec {
   pname = "urxvtconfig";
   version = "unstable-2017-11-30";
 
-  src = fetchFromGitHub {
-    owner = "daedreth"; repo = "URXVTConfig";
-    rev = "f5140f98b66b3d3b85f265297aded859f4d71235";
-    sha256 = "0vflnjh3j0083619gy8jjb5bp2vkjnkdpl2qyzlkya55fwy2rgkv";
-  };
+  src = (import ../../nix/sources.nix).urxvtconfig;
 
   nativeBuildInputs = [
     qmake

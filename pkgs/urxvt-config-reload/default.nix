@@ -6,10 +6,6 @@ stdenv.mkDerivation {
 
   src = (import ../../nix/sources.nix).urxvt-config-reload;
 
-  patches = [
-    ./border-color.patch
-  ];
-
   buildInputs = [ makeWrapper ];
 
   extraLibs = [

@@ -154,5 +154,17 @@
         "type": "tarball",
         "url": "https://github.com/regnarg/urxvt-config-reload/archive/0448564caedc636bc90bac4c126e3bf75497a621.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "urxvtconfig": {
+        "branch": "master",
+        "description": "A graphical user interface tool for configuration of the rxvt-unicode terminal emulator.",
+        "homepage": null,
+        "owner": "daedreth",
+        "repo": "URXVTConfig",
+        "rev": "f5140f98b66b3d3b85f265297aded859f4d71235",
+        "sha256": "0vflnjh3j0083619gy8jjb5bp2vkjnkdpl2qyzlkya55fwy2rgkv",
+        "type": "tarball",
+        "url": "https://github.com/daedreth/URXVTConfig/archive/f5140f98b66b3d3b85f265297aded859f4d71235.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
