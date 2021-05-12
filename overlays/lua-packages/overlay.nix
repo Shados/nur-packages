@@ -48,11 +48,7 @@ let
     });
 
     ldoc = super.ldoc.override ({
-      src = pkgs.fetchFromGitHub {
-        owner = "Shados"; repo = "LDoc";
-        rev = "50d268a2387597c813fea6b060c5d08742dcf58a";
-        sha256 = "1ji85nqjgdzr2p00a7hkxwg1bckixaqrsxxc3rq76giwaf8s16q9";
-      };
+      src = (import ../../nix/sources.nix).ldoc;
     });
 
     lua-ev = super.lua-ev.override ({

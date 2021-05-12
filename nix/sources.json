@@ -59,6 +59,18 @@
         "url": "https://github.com/Shados/lcmark/archive/local-changes.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "ldoc": {
+        "branch": "shados-collected-improvements",
+        "description": "A fork collecting some fixes/changes/improvements I use; seeing as it appears the upstream maintainer is absent.",
+        "homepage": "http://stevedonovan.github.com/ldoc/",
+        "owner": "Shados",
+        "repo": "LDoc",
+        "rev": "50d268a2387597c813fea6b060c5d08742dcf58a",
+        "sha256": "1ji85nqjgdzr2p00a7hkxwg1bckixaqrsxxc3rq76giwaf8s16q9",
+        "type": "tarball",
+        "url": "https://github.com/Shados/LDoc/archive/50d268a2387597c813fea6b060c5d08742dcf58a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "moonpick-vim": {
         "branch": "master",
         "description": "ALE-based vim integration for moonpick",
