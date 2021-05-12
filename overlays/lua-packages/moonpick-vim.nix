@@ -1,5 +1,6 @@
 { stdenv, moonscript, buildLuarocksPackage
 , moonpick
+, isLua51, isLuaJIT
 }:
 buildLuarocksPackage rec {
   pname = "moonpick-vim";
@@ -11,6 +12,8 @@ buildLuarocksPackage rec {
     moonscript
     moonpick
   ];
+
+  disabled = !(isLua51 || isLuaJIT);
 
   knownRockspec = "${pname}-${version}.rockspec";
 
