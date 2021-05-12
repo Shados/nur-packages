@@ -1,8 +1,8 @@
-{ stdenv, qmake
+{ stdenv, mkDerivation, qmake
 , qtbase, imagemagick, fontconfig, libXft
 }:
 
-stdenv.mkDerivation rec {
+mkDerivation rec {
   pname = "urxvtconfig";
   version = "unstable-2017-11-30";
 
