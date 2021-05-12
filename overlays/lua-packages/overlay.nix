@@ -36,11 +36,7 @@ let
     in rec {
       version = "${version'}-${revision}";
       # Add support for luajit & 5.1 (test this moar), and use lyaml
-      src = pkgs.fetchFromGitHub {
-        owner = "Shados"; repo = "lcmark";
-        rev = "local-changes";
-        sha256 = "1zkaj30mmah71v296sfs61a9jb3g1s3rc0d6sg9kcdck4hwlvaai";
-      };
+      src = (import ../../nix/sources.nix).lcmark;
       disabled = luaOlder "5.1" || luaAtLeast "5.4";
       knownRockspec = let
         rockspecName = "${super.lcmark.pname}-${version'}-${revision}.rockspec";
