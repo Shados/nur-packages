@@ -1,3 +1,6 @@
+let
+  pins = import ../nix/sources.nix;
+in
 {
   # Allows specifying cross-lua-version Lua package overrides
   lua-overrides = import ./lua-overrides.nix;
@@ -21,12 +24,8 @@
       else super.mosh.overrideAttrs (oldAttrs: rec {
         name = "${pname}-${version}";
         pname = "mosh";
-        version = "unstable-2018-08-30";
-        src = super.fetchFromGitHub {
-          owner = "mobile-shell"; repo = pname;
-          rev = "944fd6c796338235c4f3d8daf4959ff658f12760";
-          sha256 = "0fwrdqizwnn0kmf8bvlz334va526mlbm1kas9fif0jmvl1q11ayv";
-        };
+        version = "unstable-2020-05-18";
+        src = pins.mosh;
         patches = [
           (super.path + /pkgs/tools/networking/mosh/ssh_path.patch)
           (super.path + /pkgs/tools/networking/mosh/utempter_path.patch)
