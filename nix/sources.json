@@ -11,6 +11,18 @@
         "url": "https://github.com/clementine-player/Clementine/archive/1.4.0rc1-591-g579d86904.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "earthshine": {
+        "branch": "master",
+        "description": "Very 'early alpha' set of Moonscript libraries",
+        "homepage": null,
+        "owner": "Shados",
+        "repo": "earthshine",
+        "rev": "6d541b9225efe880ea231e24261af1ff722c3cac",
+        "sha256": "0xswz4ix857h1ffwzk1kph83dlyyivdbsapa2b90684975yc7yki",
+        "type": "tarball",
+        "url": "https://github.com/Shados/earthshine/archive/6d541b9225efe880ea231e24261af1ff722c3cac.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "moonpick-vim": {
         "branch": "master",
         "description": "ALE-based vim integration for moonpick",
