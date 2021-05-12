@@ -83,6 +83,18 @@
         "url": "https://github.com/Shados/LDoc/archive/50d268a2387597c813fea6b060c5d08742dcf58a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "loudgain": {
+        "branch": "master",
+        "description": "ReplayGain 2.0 loudness normalizer based on the EBU R128/ITU BS.1770 standard (-18 LUFS, FLAC, Ogg, MP2, MP3, MP4, M4A, AAC, ALAC, Opus, ASF, WMA, WAV, AIFF, WavPack, APE)",
+        "homepage": "",
+        "owner": "Moonbase59",
+        "repo": "loudgain",
+        "rev": "8e861936d5de0c8ac4342d055b3d0b8c2e740b17",
+        "sha256": "08wiy6v5kj274g3ml4xdkchk7kwd14lqwxjyf3sr82br6zp1sbd7",
+        "type": "tarball",
+        "url": "https://github.com/Moonbase59/loudgain/archive/8e861936d5de0c8ac4342d055b3d0b8c2e740b17.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "moonpick-vim": {
         "branch": "master",
         "description": "ALE-based vim integration for moonpick",
