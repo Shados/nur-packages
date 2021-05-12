@@ -71,11 +71,7 @@ let
     });
 
     moonscript = super.moonscript.override ({
-      src = pkgs.fetchFromGitHub {
-        owner = "Shados"; repo = "moonscript";
-        rev = "623bb0fc5d0d23c05caf0c8ffded6ef751baf366";
-        sha256 = "05kpl9l1311lgjrfghnqnh6m3zkwp09gww056bf30fbvhlfc8iyw";
-      };
+      src = (import ../../nix/sources.nix).moonscript;
       knownRockspec = with super.moonscript; "${pname}-dev-1.rockspec";
       propagatedBuildInputs = with self; [
         lua lpeg luafilesystem argparse

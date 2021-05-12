@@ -83,6 +83,18 @@
         "url": "https://github.com/Shados/moonpick-vim/archive/b9252660b44b270cc3bc933053fccb3788e12fd4.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "moonscript": {
+        "branch": "master",
+        "description": ":crescent_moon: A language that compiles to Lua",
+        "homepage": "http://moonscript.org",
+        "owner": "Shados",
+        "repo": "moonscript",
+        "rev": "overhaul-watchers",
+        "sha256": "05kpl9l1311lgjrfghnqnh6m3zkwp09gww056bf30fbvhlfc8iyw",
+        "type": "tarball",
+        "url": "https://github.com/Shados/moonscript/archive/overhaul-watchers.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "mosh": {
         "branch": "master",
         "description": "Mobile Shell",
