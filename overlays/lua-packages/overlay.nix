@@ -81,8 +81,6 @@ let
         busted loadkit
       ];
       checkPhase = ''
-        export LUA_PATH="''${LUA_PATH:+''${LUA_PATH};}$NIX_LUA_PATH"
-        export LUA_CPATH="''${LUA_CPATH:+''${LUA_CPATH};}$NIX_LUA_CPATH"
         make test $makeFlags
       '';
     });
