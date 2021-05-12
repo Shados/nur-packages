@@ -11,6 +11,18 @@
         "url": "https://github.com/clementine-player/Clementine/archive/1.4.0rc1-591-g579d86904.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "moonpick-vim": {
+        "branch": "master",
+        "description": "ALE-based vim integration for moonpick",
+        "homepage": null,
+        "owner": "Shados",
+        "repo": "moonpick-vim",
+        "rev": "b9252660b44b270cc3bc933053fccb3788e12fd4",
+        "sha256": "06sg2najn14vg4wb2nl6pbswv224sznn3m8ba9lw9irlyg40f3iz",
+        "type": "tarball",
+        "url": "https://github.com/Shados/moonpick-vim/archive/b9252660b44b270cc3bc933053fccb3788e12fd4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "mosh": {
         "branch": "master",
         "description": "Mobile Shell",
