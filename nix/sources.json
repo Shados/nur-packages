@@ -130,5 +130,17 @@
         "type": "tarball",
         "url": "https://github.com/mobile-shell/mosh/archive/03087e7a761df300c2d8cd6e072890f8e1059dfa.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "tagsistant": {
+        "branch": "master",
+        "description": "Semantic filesystem for Linux, with relation reasoner, autotagging plugins and a deduplication service",
+        "homepage": "http://www.tagsistant.net",
+        "owner": "StrumentiResistenti",
+        "repo": "Tagsistant",
+        "rev": "0dabdca1077136b7626a2977410f910689c235b7",
+        "sha256": "06pi712grfz790n2v75qbxwdm4dy96h25fyd9jkx3wfm1hc83y5m",
+        "type": "tarball",
+        "url": "https://github.com/StrumentiResistenti/Tagsistant/archive/0dabdca1077136b7626a2977410f910689c235b7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
