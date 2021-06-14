@@ -1,4 +1,4 @@
-{ stdenv, autoreconfHook, pkg-config, pins
+{ lib, stdenv, autoreconfHook, pkg-config, pins
 , glib, fuse, libdbi, libdbiDrivers, sqlite, libextractor
 }:
 stdenv.mkDerivation {
@@ -21,7 +21,7 @@ stdenv.mkDerivation {
       --replace 'dbi_initialize(NULL' 'dbi_initialize("${libdbiDrivers}/lib/dbd/"' \
       --replace 'dbi_initialize_r(NULL' 'dbi_initialize_r("${libdbiDrivers}/lib/dbd/"'
   '';
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Semantic filesystem for Linux, with relation reasoner, autotagging plugins and a deduplication service";
     longDescription = ''
       Tagsistant is a semantic file system for Linux, a personal tool

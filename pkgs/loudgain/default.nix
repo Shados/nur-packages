@@ -1,4 +1,4 @@
-{ stdenv, cmake, pkgconfig, pins
+{ lib, stdenv, cmake, pkgconfig, pins
 , ffmpeg, libebur128, taglib, zlib
 }:
 stdenv.mkDerivation rec {
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     ffmpeg libebur128 taglib zlib
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "ReplayGain 2.0 loudness normalizer based on the EBU R128/ITU BS.1770 standard";
     homepage    = https://github.com/Moonbase59/loudgain;
     maintainers = with maintainers; [ arobyn ];
