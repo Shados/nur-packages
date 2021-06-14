@@ -4,7 +4,7 @@ stdenv.mkDerivation {
   pname = "urxvt-config-reload";
   version = "unstable-2019-10-11";
 
-  src = pins.urxvt-config-reload;
+  src = pins.urxvt-config-reload.outPath;
 
   buildInputs = [ makeWrapper ];
 

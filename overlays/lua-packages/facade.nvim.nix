@@ -6,7 +6,7 @@ buildLuarocksPackage rec {
   pname = "facade.nvim";
   version = "scm-1";
 
-  src = pins."facade.nvim";
+  src = pins."facade.nvim".outPath;
 
   propagatedBuildInputs = [
     earthshine

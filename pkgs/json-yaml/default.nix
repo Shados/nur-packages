@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
   pname = "json-yaml";
   version = "1.2.1";
 
-  src = pins.json-yaml;
+  src = pins.json-yaml.outPath;
 
   buildInputs = [
     libyaml yajl

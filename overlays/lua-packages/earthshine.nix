@@ -5,7 +5,7 @@ buildLuarocksPackage rec {
   pname = "earthshine";
   version = "scm-1";
 
-  src = pins.earthshine;
+  src = pins.earthshine.outPath;
 
   propagatedBuildInputs = [
     moonscript

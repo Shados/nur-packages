@@ -6,7 +6,7 @@ buildLuarocksPackage rec {
   pname = "moonpick-vim";
   version = "scm-1";
 
-  src = pins.moonpick-vim;
+  src = pins.moonpick-vim.outPath;
 
   propagatedBuildInputs = [
     moonscript

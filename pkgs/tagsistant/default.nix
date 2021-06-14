@@ -4,7 +4,7 @@
 stdenv.mkDerivation {
   pname = "tagsistant";
   version = "unstable-2017-02-12";
-  src = pins.tagsistant;
+  src = pins.tagsistant.outPath;
   nativeBuildInputs = [
     autoreconfHook pkg-config
   ];

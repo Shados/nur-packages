@@ -5,7 +5,7 @@ stdenv.mkDerivation rec {
   pname = "loudgain";
   version = "unstable-2020-12-28";
 
-  src = pins.loudgain;
+  src = pins.loudgain.outPath;
 
   nativeBuildInputs = [
     cmake pkgconfig

@@ -6,7 +6,7 @@ mkDerivation rec {
   pname = "urxvtconfig";
   version = "unstable-2017-11-30";
 
-  src = pins.urxvtconfig;
+  src = pins.urxvtconfig.outPath;
 
   nativeBuildInputs = [
     qmake
