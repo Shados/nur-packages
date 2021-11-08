@@ -23,6 +23,10 @@ let repo = rec {
       privacySupport = true;
     };
 
+  firefox-history-merger = pkgs.callPackage ./pkgs/firefox-history-merger {
+    inherit pins;
+  };
+
   json-yaml = pkgs.callPackage ./pkgs/json-yaml {
     inherit pins;
   };
