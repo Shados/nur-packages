@@ -11,12 +11,18 @@ env:
   global:
     - CACHIX_CACHE=shados-nur-packages
     - NUR_REPO=shados
+    - EXTRA_NIX_CONFIG=extra-nix.conf
 
 matrix:
   include:
     - env: NIX_CHANNEL=https://nixos.org/channels/nixpkgs-unstable
     - env: NIX_CHANNEL=https://nixos.org/channels/nixos-unstable
     # - env: NIX_CHANNEL=https://nixos.org/channels/nixos-20.03
+
+before_install:
+  - |
+    cat << '' > extra-nix.conf
+    experimental-features = nix-command
 
 script:
   - nix-build travis.nix -A buildOutputs
