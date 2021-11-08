@@ -19,7 +19,11 @@ before_install:
   # hahhh
   - |
     sudo apt-get update && \
-      sudo apt-get install apt-transport-https ca-certificates -y && \
+      sudo apt-get install \
+        apt-transport-https \
+        ca-certificates \
+        libgnutls-openssl27 \
+        libgnutls30 -y && \
       sudo update-ca-certificates
 
 script:
