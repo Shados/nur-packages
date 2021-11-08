@@ -3,6 +3,10 @@ import: nix-community/nix-travis-ci:nix.yml@main
 
 sudo: false
 
+# Getting Travis' Xenial image to work with Let's Encrypt's 2021-10+ ISRG Root
+# X1-verified certs did *not* want to happen, so just freakin' use Focal Fossa
+dist: focal
+
 env:
   global:
     - CACHIX_CACHE=shados-nur-packages
@@ -13,18 +17,6 @@ matrix:
     - env: NIX_CHANNEL=https://nixos.org/channels/nixpkgs-unstable
     - env: NIX_CHANNEL=https://nixos.org/channels/nixos-unstable
     # - env: NIX_CHANNEL=https://nixos.org/channels/nixos-20.03
-
-before_install:
-  # Fix 2021-10 Let's Encrypt cert support on Travis' default Xenial images,
-  # hahhh
-  - |
-    sudo apt-get update && \
-      sudo apt-get install \
-        apt-transport-https \
-        ca-certificates \
-        libgnutls-openssl27 \
-        libgnutls30 -y && \
-      sudo update-ca-certificates
 
 script:
   - nix-build travis.nix -A buildOutputs
