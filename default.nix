@@ -10,6 +10,10 @@ let repo = rec {
 
   ## Packages
 
+  arcconf = pkgs.callPackage ./pkgs/arcconf {
+    inherit pins;
+  };
+
   firefox-common = opts: with pkgs; callPackage
     (import (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix) opts)
     { libpng = libpng_apng;
