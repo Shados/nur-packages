@@ -1,5 +1,6 @@
 {
     "arcconf": {
+        "builtin": false,
         "sha256": "0r65hspzs25lnca10810m7mjxzfzwdnm6gikxc8d98zsckz50aig",
         "type": "file",
         "url": "https://download.adaptec.com/raid/storage_manager/arcconf_v2_05_22932.zip",
@@ -59,6 +60,7 @@
     },
     "firefox-history-merger": {
         "branch": "master",
+        "builtin": false,
         "description": "Merge Firefox history and repair missing favicons with ease",
         "homepage": "",
         "owner": "crazy-max",
