@@ -4,6 +4,7 @@ self: super: with super.lib; let
     (nameAndPkgs "lua5_1" "lua51Packages" )
     (nameAndPkgs "lua5_2" "lua52Packages" )
     (nameAndPkgs "lua5_3" "lua53Packages" )
+    (nameAndPkgs "lua5_4" "lua54Packages" )
     (nameAndPkgs "luajit" "luajitPackages" )
   ];
   nameAndPkgs = name: pkgs: { interpreter = name; packages = pkgs; };
