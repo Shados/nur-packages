@@ -43,6 +43,8 @@ let repo = rec {
     inherit pins;
   };
 
+  systemd-lock-handler = pkgs.callPackage ./pkgs/systemd-lock-handler { };
+
   tagsistant = pkgs.callPackage ./pkgs/tagsistant {
     inherit pins;
   };
