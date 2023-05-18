@@ -18,6 +18,10 @@ let repo = rec {
     inherit pins;
   };
 
+  dualsensectl = pkgs.callPackage ./pkgs/dualsensectl {
+    inherit pins;
+  };
+
   firefox-common = opts: with pkgs; callPackage
     (import (nixpkgsPath + /pkgs/applications/networking/browsers/firefox/common.nix) opts)
     { libpng = libpng_apng;
