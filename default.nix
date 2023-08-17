@@ -2,7 +2,7 @@
 let
   nixpkgsPath = pkgs.path;
   pins = import ./nix/sources.nix nixpkgsPath pkgs.targetPlatform.system;
-  naersk = pkgs.callPackage (import pins.naersk.outPath) { };
+  naersk = pkgs.callPackage (import (pins.naersk.outPath + /default.nix)) { };
 in
 let repo = rec {
   lib = import ./lib { inherit pkgs repo; };
