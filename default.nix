@@ -2,6 +2,7 @@
 let
   nixpkgsPath = pkgs.path;
   pins = import ./nix/sources.nix nixpkgsPath pkgs.targetPlatform.system;
+  naersk = pkgs.callPackage (import pins.naersk.outPath) { };
 in
 let repo = rec {
   lib = import ./lib { inherit pkgs repo; };
@@ -49,6 +50,10 @@ let repo = rec {
 
   loudgain = pkgs.callPackage ./pkgs/loudgain {
     inherit pins;
+  };
+
+  steamguard-cli = pkgs.callPackage ./pkgs/steamguard-cli {
+    inherit naersk pins;
   };
 
   switch-dbibackend = pkgs.callPackage ./pkgs/switch-dbibackend {
