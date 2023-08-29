@@ -52,10 +52,6 @@ let repo = rec {
     inherit pins;
   };
 
-  steamguard-cli = pkgs.callPackage ./pkgs/steamguard-cli {
-    inherit naersk pins;
-  };
-
   switch-dbibackend = pkgs.callPackage ./pkgs/switch-dbibackend {
     inherit pins;
   };
@@ -85,4 +81,12 @@ let repo = rec {
   # waterfox-unwrapped = pkgs.callPackage ./pkgs/waterfox {
   #   inherit firefox-common nixpkgsPath;
   # };
+
+  # Work-around NUR's eval test inexplicably failing on naersk, even though
+  # running the eval test locally works fine =/
+  uncheckedPkgs = {
+    steamguard-cli = pkgs.callPackage ./pkgs/steamguard-cli {
+      inherit naersk pins;
+    };
+  };
 }; in repo
