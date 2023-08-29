@@ -247,10 +247,10 @@
         "homepage": null,
         "owner": "regnarg",
         "repo": "urxvt-config-reload",
-        "rev": "0448564caedc636bc90bac4c126e3bf75497a621",
-        "sha256": "1xacjh0nvr7kiiqsnliaxw137psll4hr9n4j1562nhbgrzghwxbj",
+        "rev": "29ad467c4e72bb8655c0431bf960f382f2b0fc4a",
+        "sha256": "0crymw5q5s73h0a459zsxq670im0w8h4rpw47lclgrlvl7djvm5y",
         "type": "tarball",
-        "url": "https://github.com/regnarg/urxvt-config-reload/archive/0448564caedc636bc90bac4c126e3bf75497a621.tar.gz",
+        "url": "https://github.com/regnarg/urxvt-config-reload/archive/29ad467c4e72bb8655c0431bf960f382f2b0fc4a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "urxvtconfig": {
