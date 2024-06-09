@@ -1,4 +1,4 @@
-name,src,ref,server,version,luaversion,maintainers
+name,rockspec,ref,server,version,luaversion,maintainers
 cmark,,,,,,arobyn
 copas,,,,,,arobyn
 etlua,,,,,,arobyn
