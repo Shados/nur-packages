@@ -310,6 +310,7 @@
     },
     "yuescript": {
         "branch": "main",
+        "builtin": false,
         "description": "A Moonscript dialect compiles to Lua.",
         "homepage": "http://yuescript.org",
         "owner": "pigpigyyy",
