@@ -214,19 +214,6 @@
         "url": "https://github.com/nix-community/naersk/archive/275010712ce41dff66634f9910bc1f085239b370.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "napalm": {
-        "branch": "master",
-        "builtin": false,
-        "description": "Support for building npm packages in Nix and lightweight npm registry [maintainer @jtojnar]",
-        "homepage": "",
-        "owner": "nix-community",
-        "repo": "napalm",
-        "rev": "a8215ccf1c80070f51a92771f3bc637dd9b9f7ee",
-        "sha256": "04vf4mk2q55gpnvxw3qb735lkdyml77qq3lfzfwis619g9izs7c3",
-        "type": "tarball",
-        "url": "https://github.com/nix-community/napalm/archive/a8215ccf1c80070f51a92771f3bc637dd9b9f7ee.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "sfutils": {
         "builtin": false,
         "sha256": "15dl4dcf5b0yp1i4m5jaiyr7cbw5bj678ckh84hs98prk7n145fs",

@@ -1,7 +1,6 @@
 { lib, stdenv, pins
 , buildGoModule
-, napalm
-, nodejs
+, buildNpmPackage
 }:
 let
   pname = "broadcast-box";
@@ -15,22 +14,18 @@ let
     license     = licenses.mit;
   };
 
-  web = napalm.buildPackage "${src}/web" {
+  web = buildNpmPackage {
     pname = "${pname}-web";
-    inherit version nodejs;
+    inherit version;
+    src = "${src}/web";
+    npmDepsHash = "sha256-BusrGTcY6P7xpwgoB1ScFUFg3lMDEmX5TatYZBULGNc=";
     preBuild = ''
       cp "${src}/.env.production" ../
-      substituteInPlace package.json \
-        --replace "dotenv -e" "node node_modules/dotenv-cli/cli.js -e"
     '';
-    npmCommands = [
-      "npm install --loglevel verbose --nodedir=${nodejs}/include/node"
-      "npm run build --loglevel verbose --nodedir=${nodejs}/include/node"
-    ];
     installPhase = ''
       runHook preInstall
 
-      cp -r $sourceRoot/build $out
+      cp -r build $out
 
       runHook postInstall
     '';
