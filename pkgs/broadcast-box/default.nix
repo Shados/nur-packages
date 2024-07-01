@@ -3,14 +3,10 @@
 , napalm
 , nodejs
 }:
-buildGoModule rec {
+let
   pname = "broadcast-box";
-  version = "unstable-2023-09-09";
-
+  version = "unstable-2024-07-01";
   src = pins.broadcast-box.outPath;
-
-  vendorHash = "sha256-0jmm0v/8SKm7ulucH68S8To5/LD4Dlz1T4KqtdBCNT0=";
-
   meta = with lib; {
     description = "WebRTC broadcast server";
     homepage = https://github.com/Glimesh/broadcast-box;
@@ -19,7 +15,7 @@ buildGoModule rec {
     license     = licenses.mit;
   };
 
-  passthru.web = napalm.buildPackage "${src}/web" {
+  web = napalm.buildPackage "${src}/web" {
     pname = "${pname}-web";
     inherit version nodejs;
     preBuild = ''
@@ -27,11 +23,6 @@ buildGoModule rec {
       substituteInPlace package.json \
         --replace "dotenv -e" "node node_modules/dotenv-cli/cli.js -e"
     '';
-    # preNpmHook = ''
-    #   if ! [[ -f ../.env.production ]]; then
-    #     cp "${src}/.env.production" ../
-    #   fi
-    # '';
     npmCommands = [
       "npm install --loglevel verbose --nodedir=${nodejs}/include/node"
       "npm run build --loglevel verbose --nodedir=${nodejs}/include/node"
@@ -46,4 +37,28 @@ buildGoModule rec {
 
     inherit meta;
   };
+in
+buildGoModule rec {
+  inherit pname version src;
+
+  vendorHash = "sha256-Z0gqZA/HUiZHFHF93sVWo2aDyUyJBPHCwqciJxyRCZM=";
+  proxyVendor = true;
+
+  postPatch = ''
+    substituteInPlace main.go \
+      --replace-fail './web/build' '${placeholder "out"}/share/broadcast-box'
+  '';
+
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p $out/share/broadcast-box
+    cp -r ${web}/* $out/share/broadcast-box
+
+    cp -r "$GOPATH/bin" $out
+
+    runHook postInstall
+  '';
+
+  inherit meta;
 }
