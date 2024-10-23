@@ -228,10 +228,10 @@
         "homepage": "",
         "owner": "dyc3",
         "repo": "steamguard-cli",
-        "rev": "84f488a7bdbc184ac0615700c1b0f7a64e7b77a7",
-        "sha256": "1xqr145xsc6cfdm7pr3rrcm4qbznfj7c9423wafyjah3gfrpkhkd",
+        "rev": "296a183e6224c67dfbd54ac713aee2d6a4bb68c0",
+        "sha256": "0779ihw5fk4qz17kg962hcc7g17pqqkkkh75vrsw8zcx49ij5v1s",
         "type": "tarball",
-        "url": "https://github.com/dyc3/steamguard-cli/archive/84f488a7bdbc184ac0615700c1b0f7a64e7b77a7.tar.gz",
+        "url": "https://github.com/dyc3/steamguard-cli/archive/296a183e6224c67dfbd54ac713aee2d6a4bb68c0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "switch-dbibackend": {
