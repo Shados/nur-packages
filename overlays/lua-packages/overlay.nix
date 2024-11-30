@@ -130,13 +130,11 @@ selfPkgs: superPkgs: let
     });
 
     yuescript = super.luaLib.overrideLuarocks super.yuescript (oa: {
-      # NOTE: Don't know why, but it can't find /lib, from a look through the
-      # CMakeLists.txt it should have no issue locating it given it locates the
-      # include directory correctly =/. I've tried manually setting things but
-      # this results in a broken build process that fails to link against the
-      # library. Works fine on PUC-Rio Lua versions. I've opened issue # 169
-      # against Yuescript's github repo to ask about this.
-      meta.broken = super.isLuaJIT;
+      # See Yuescript github issue #169
+      postPatch = pkgs.lib.optionalString super.isLuaJIT ''
+        substituteInPlace CMakeLists.txt \
+          --replace 'NAMES luajit libluajit' 'NAMES luajit libluajit luajit-5.1 libluajit-5.1'
+      '';
     });
   };
 in pkgs.lib.defineLuaPackageOverrides pkgs [ generatedLuaPackages overridenLuaPackages ]
