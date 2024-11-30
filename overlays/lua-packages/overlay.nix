@@ -117,18 +117,6 @@ selfPkgs: superPkgs: let
       ];
     });
 
-    yuecheck-vim = super.luaLib.overrideLuarocks super.yuecheck-vim (oa: {
-      # NOTE: Not entirely clear why it places yuescript in nativeBuildInputs
-      # rather than propagatedBuildInputs by default; perhaps because there is
-      # both a native binary package and a Lua module package under the same
-      # name? Should I rename the former to yuescript-bin or yuescript-native
-      # or something?
-      nativeBuildInputs = [];
-      propagatedBuildInputs = oa.propagatedBuildInputs ++ [
-        self.yuescript
-      ];
-    });
-
     yuescript = super.luaLib.overrideLuarocks super.yuescript (oa: {
       # See Yuescript github issue #169
       postPatch = pkgs.lib.optionalString super.isLuaJIT ''
