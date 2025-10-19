@@ -37,6 +37,14 @@ stdenv.mkDerivation rec {
     })
   ];
 
+  # CMake 2.8 is deprecated and is no longer supported by CMake > 4
+  # https://github.com/NixOS/nixpkgs/issues/445447
+  postPatch = ''
+    substituteInPlace CMakeLists.txt --replace-fail \
+      "CMAKE_MINIMUM_REQUIRED(VERSION 2.8)" \
+      "CMAKE_MINIMUM_REQUIRED(VERSION 3.10)"
+  '';
+
   nativeBuildInputs = [
     cmake
     pkg-config
